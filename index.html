@@ -1,220 +1,32 @@
 
+
 <!doctype html>
-<html lang="en" class="light">
+<html lang="es">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-P7RSDF2Z');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17337021885"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17337021885');
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB0NP1MM86"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-FB0NP1MM86');
-    </script>
-
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://static.readdy.ai/web/favicon-180.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://static.readdy.ai/web/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://static.readdy.ai/web/favicon-16.png" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Readdy</title>
-    <script>
-      (function (w, r) {
-        w._rwq = r;
-        w[r] =
-          w[r] ||
-          function () {
-            (w[r].q = w[r].q || []).push(arguments);
-          };
-      })(window, 'rewardful');
-    </script>
-    <script async src="https://r.wdfl.co/rw.js" data-rewardful="e9859a"></script>
-
-    <script>
-      function setRootFontSize() {
-        const baseSize = 14; // 基础字体大小
-        const scaleFactor = window.innerWidth / 393;
-        document.documentElement.style.fontSize = `${baseSize * scaleFactor}px`;
-      }
-    </script>
-
-    <!-- Preload proxy -->
-    <script>
-      try {
-        const READDY_PRELOAD = {};
-        READDY_PRELOAD['toggles'] = fetch('/api/public/toggles', {
-          method: 'GET'
-        }).then((res) => res.json());
-        window.READDY_PRELOAD = READDY_PRELOAD;
-      } catch (error) {
-        console.error('Preload proxy error:', error);
-      }
-    </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1144403361112207');
-      fbq('track', 'PageView');
-    </script>
-
-    <!-- Bing Ads Tag -->
-    <script>
-      (function (w, d, t, r, u) {
-        var f, n, i;
-        (w[u] = w[u] || []),
-          (f = function () {
-            var o = { ti: '187218950', enableAutoSpaTracking: true };
-            (o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad');
-          }),
-          (n = d.createElement(t)),
-          (n.src = r),
-          (n.async = 1),
-          (n.onload = n.onreadystatechange =
-            function () {
-              var s = this.readyState;
-              (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
-            }),
-          (i = d.getElementsByTagName(t)[0]),
-          i.parentNode.insertBefore(n, i);
-      })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
-    </script>
-    <!-- You can set default Consent Mode right after the UET tag -->
-    <script>
-      window.uetq = window.uetq || [];
-      window.uetq.push('consent', 'default', { ad_storage: 'denied' });
-    </script>
-    <!-- Implement a cookie banner or another method to collect user consent. When a user grants consent (e.g., selects 'Accept' on your banner), update the consent settings using the command below. -->
-    <script>
-      window.uetq = window.uetq || [];
-      window.uetq.push('consent', 'update', { ad_storage: 'granted' });
-    </script>
-
-    <!-- TikTok Pixel Code Start -->
-    <script>
-      !(function (w, d, t) {
-        w.TiktokAnalyticsObject = t;
-        var ttq = (w[t] = w[t] || []);
-        (ttq.methods = [
-          'page',
-          'track',
-          'identify',
-          'instances',
-          'debug',
-          'on',
-          'off',
-          'once',
-          'ready',
-          'alias',
-          'group',
-          'enableCookie',
-          'disableCookie',
-          'holdConsent',
-          'revokeConsent',
-          'grantConsent'
-        ]),
-          (ttq.setAndDefer = function (t, e) {
-            t[e] = function () {
-              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-            };
-          });
-        for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-        (ttq.instance = function (t) {
-          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
-          return e;
-        }),
-          (ttq.load = function (e, n) {
-            var r = 'https://analytics.tiktok.com/i18n/pixel/events.js',
-              o = n && n.partner;
-            (ttq._i = ttq._i || {}),
-              (ttq._i[e] = []),
-              (ttq._i[e]._u = r),
-              (ttq._t = ttq._t || {}),
-              (ttq._t[e] = +new Date()),
-              (ttq._o = ttq._o || {}),
-              (ttq._o[e] = n || {});
-            n = document.createElement('script');
-            (n.type = 'text/javascript'), (n.async = !0), (n.src = r + '?sdkid=' + e + '&lib=' + t);
-            e = document.getElementsByTagName('script')[0];
-            e.parentNode.insertBefore(n, e);
-          });
-
-        ttq.load('D4AJMFRC77U1PLJOHOOG');
-        ttq.page();
-      })(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
-    <script type="module" crossorigin src="https://static.readdy.ai/static/index-m6eR99kx.js"></script>
-    <link rel="stylesheet" crossorigin href="https://static.readdy.ai/static/index-5HhcEcU7.css">
-  </head>
+    <title>Alberto Gallego Punzano - Especialista en Ciberseguridad | Portfolio Profesional</title>
+    <meta name="description" content="Alberto Gallego Punzano, especialista en ciberseguridad ofensiva y defensiva. Certificado BTL1, hacking ético, análisis de vulnerabilidades y respuesta ante incidentes. Portfolio profesional de ciberseguridad." />
+    <meta name="keywords" content="ciberseguridad, hacking ético, vulnerabilidades, BTL1, eJPTv2" />
+    <link rel="canonical" href="https://albertogallego.readdy.ai/" />
+    <meta name="last-modified" content="2024-12-19" />
+    
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Alberto Gallego Punzano - Especialista en Ciberseguridad" />
+    <meta property="og:description" content="Especialista en ciberseguridad ofensiva y defensiva. Certificado BTL1, preparándose para eJPTv2." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://albertogallego.readdy.ai/" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+          <script type="module" crossorigin src="/preview/747ffda5-4098-467a-b588-eacf19203f06/4473217/assets/index-B0TWl1yf.js"></script>
+          <link rel="stylesheet" crossorigin href="/preview/747ffda5-4098-467a-b588-eacf19203f06/4473217/assets/index-D9jb9gwf.css">
+        </head>
   <body>
-    <!-- Facebook Pixel Code -->
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1144403361112207&ev=PageView&noscript=1"
-      />
-    </noscript>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P7RSDF2Z"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div outline="0" id="app"></div>
+    <div id="root"></div>
   </body>
 </html>
