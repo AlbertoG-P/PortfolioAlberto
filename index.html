@@ -1,36 +1,160 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Alberto Gallego Punzano | Especialista en Ciberseguridad | BTL1 & EJPTv2</title>
-    <meta name="description" content="Alberto Gallego Punzano - Especialista en ciberseguridad ofensiva y defensiva. Certificado BTL1 y EJPTv2. Experto en hacking ético, análisis de vulnerabilidades y respuesta ante incidentes. Portfolio profesional de ciberseguridad." />
-    <meta name="keywords" content="ciberseguridad, pentesting, hacking ético, BTL1, EJPTv2, análisis de vulnerabilidades, blue team, red team, seguridad informática" />
-    <meta name="author" content="Alberto Gallego Punzano" />
-    <link rel="canonical" href="https://albertogallego.com/" />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Alberto Gallego Punzano | Especialista en Ciberseguridad" />
-    <meta property="og:description" content="Profesional en ciberseguridad ofensiva y defensiva. Certificado BTL1 y EJPTv2. Experto en pentesting y análisis de vulnerabilidades." />
-    <meta property="og:url" content="https://albertogallego.com/" />
-    
-    <!-- Remix Icon CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <meta name="last-modified" content="2025-01-15" />
-          <script type="module" crossorigin src="/preview/73ab7fe6-bc68-4b87-9055-6cd8c9ee2d00/4510350/assets/index-CQCYshcS.js"></script>
-          <link rel="stylesheet" crossorigin href="/preview/73ab7fe6-bc68-4b87-9055-6cd8c9ee2d00/4510350/assets/index-B97jBkGD.css">
-        </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Gallego Punzano | Ciberseguridad</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            primary: '#0aff9d',
+                            secondary: '#00b4ff',
+                            dark: '#0a0a0a',
+                            gray: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                        sans: ['"IBM Plex Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cyber-dark text-gray-300 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-cyber-primary rounded-xl blur opacity-20"></div>
+                    <img src="https://huggingface.co/spaces/Alberto86/cybershield-portfolio/resolve/main/images/Diseño%20sin%20título.png" alt="Alberto Gallego Punzano" class="relative rounded-lg w-full max-w-md border-2 border-cyber-primary object-cover h-96">
+</div>
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyber-primary font-mono">Alberto Gallego Punzano</h1>
+                    <h2 class="text-2xl md:text-3xl mb-6 text-cyber-secondary">Especialista en Ciberseguridad</h2>
+                    <p class="text-lg mb-8 max-w-lg">"En un mundo de ceros y unos, la seguridad no es una opción, es una necesidad."</p>
+                    <div class="flex gap-4">
+                        <a href="#contact" class="px-6 py-3 bg-cyber-primary text-cyber-dark font-bold rounded hover:bg-opacity-90 transition">Contacto</a>
+                        <a href="#about" class="px-6 py-3 border border-cyber-primary text-cyber-primary font-bold rounded hover:bg-cyber-gray transition">Sobre mí</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Sobre mí</h2>
+            <div class="bg-cyber-gray p-8 rounded-lg border-l-4 border-cyber-primary">
+                <p class="mb-4">Profesional enfocado en ciberseguridad ofensiva y defensiva con un enfoque práctico en hacking ético, análisis de vulnerabilidades y respuesta ante incidentes.</p>
+                <p class="mb-4">Graduado de un Bootcamp de Ciberseguridad intensivo donde adquirí habilidades técnicas avanzadas mediante metodologías hands-on.</p>
+                <p class="mb-4">Poseo la certificación BTL1 (Blue Team Level 1) y actualmente cursando la certificación EJPTv2, consolidando mis conocimientos en pruebas de penetración.</p>
+                <p>Nivel de inglés B2 con capacidad para comunicación técnica fluida y redacción de documentación en inglés.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Certificaciones</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-primary hover:shadow-lg hover:shadow-cyber-primary/10 transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-feather="shield" class="text-cyber-primary"></i>
+                        <h3 class="text-xl font-bold">BTL1</h3>
+                    </div>
+                    <p>Blue Team Level 1 certificación que valida habilidades en detección y respuesta a amenazas.</p>
+                </div>
+                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-secondary hover:shadow-lg hover:shadow-cyber-secondary/10 transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-feather="target" class="text-cyber-secondary"></i>
+                        <h3 class="text-xl font-bold">EJPTv2</h3>
+                    </div>
+                    <p>eLearnSecurity Junior Penetration Tester v2 (en progreso), enfocado en pruebas de penetración básicas.</p>
+                </div>
+                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-primary hover:shadow-lg hover:shadow-cyber-primary/10 transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i data-feather="award" class="text-cyber-primary"></i>
+                        <h3 class="text-xl font-bold">Bootcamp</h3>
+                    </div>
+                    <p>Programa intensivo de ciberseguridad con enfoque práctico en hacking ético y análisis de vulnerabilidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Proyectos</h2>
+            <div class="bg-cyber-gray p-8 rounded-lg">
+                <p class="mb-6">Actualmente trabajando en varios laboratorios y reportes de seguridad que serán publicados próximamente.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border border-cyber-gray rounded hover:border-cyber-primary transition">
+                        <h3 class="text-xl font-bold mb-2 text-cyber-primary">Análisis de Vulnerabilidades</h3>
+                        <p class="text-sm opacity-80">Próximamente</p>
+                    </div>
+                    <div class="p-4 border border-cyber-gray rounded hover:border-cyber-primary transition">
+                        <h3 class="text-xl font-bold mb-2 text-cyber-primary">Reporte de Pentesting</h3>
+                        <p class="text-sm opacity-80">Próximamente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Contacto</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="mb-6">Interesado en colaborar o conocer más sobre mi trabajo? No dudes en contactarme.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i data-feather="mail" class="text-cyber-primary"></i>
+                            <a href="mailto:alberto_gallego86@hotmail.com" class="hover:text-cyber-primary transition">alberto_gallego86@hotmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-feather="linkedin" class="text-cyber-primary"></i>
+                            <a href="https://www.linkedin.com/in/albertogallegopun" target="_blank" class="hover:text-cyber-primary transition">linkedin.com/in/albertogallegopun</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cyber-gray p-6 rounded-lg">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Nombre</label>
+                            <input type="text" id="name" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-cyber-primary text-cyber-dark font-bold rounded hover:bg-opacity-90 transition">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
 </html>
