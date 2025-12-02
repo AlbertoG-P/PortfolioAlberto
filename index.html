@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto Gallego Punzano | Ciberseguridad</title>
+    <title>Alberto Gallego Punzano - Ciberseguridad</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -15,12 +15,11 @@
             theme: {
                 extend: {
                     colors: {
-                        cyber: {
-                            primary: '#0aff9d',
-                            secondary: '#00b4ff',
-                            dark: '#0a0a0a',
-                            gray: '#1a1a1a'
-                        }
+                        cyberblue: '#00f0ff',
+                        cybergreen: '#00ff9d',
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        darkgray: '#1a1a1a'
                     },
                     fontFamily: {
                         mono: ['"Fira Code"', 'monospace'],
@@ -31,118 +30,231 @@
         }
     </script>
 </head>
-<body class="bg-cyber-dark text-gray-300 font-sans">
+<body class="bg-dark text-gray-300 font-sans relative">
+    <div class="matrix-bg" id="matrixBg"></div>
     <custom-navbar></custom-navbar>
-
-    <main class="max-w-6xl mx-auto px-4 py-12">
+<main class="max-w-6xl mx-auto px-4 py-12">
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-cyber-primary rounded-xl blur opacity-20"></div>
-                    <img src="https://huggingface.co/spaces/Alberto86/cybershield-portfolio/resolve/main/images/Diseño%20sin%20título.png" alt="Alberto Gallego Punzano" class="relative rounded-lg w-full max-w-md border-2 border-cyber-primary object-cover h-96">
-</div>
-                <div>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyber-primary font-mono">Alberto Gallego Punzano</h1>
-                    <h2 class="text-2xl md:text-3xl mb-6 text-cyber-secondary">Especialista en Ciberseguridad</h2>
-                    <p class="text-lg mb-8 max-w-lg">"En un mundo de ceros y unos, la seguridad no es una opción, es una necesidad."</p>
-                    <div class="flex gap-4">
-                        <a href="#contact" class="px-6 py-3 bg-cyber-primary text-cyber-dark font-bold rounded hover:bg-opacity-90 transition">Contacto</a>
-                        <a href="#about" class="px-6 py-3 border border-cyber-primary text-cyber-primary font-bold rounded hover:bg-cyber-gray transition">Sobre mí</a>
-                    </div>
-                </div>
+        <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-dark opacity-10 pointer-events-none"></div>
+            <div class="relative z-10">
+<h1 class="text-4xl md:text-6xl font-bold text-cybergreen mb-4">
+                    Alberto Gallego Punzano
+</h1>
+                <h2 class="text-xl md:text-2xl font-mono text-cybergreen mb-8">Especialista en Ciberseguridad</h2>
+<p class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+                    "En un mundo de ceros y unos, la seguridad es la única constante."
+                </p>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i data-feather="chevron-down" class="text-cybergreen w-8 h-8"></i>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20">
-            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Sobre mí</h2>
-            <div class="bg-cyber-gray p-8 rounded-lg border-l-4 border-cyber-primary">
-                <p class="mb-4">Profesional enfocado en ciberseguridad ofensiva y defensiva con un enfoque práctico en hacking ético, análisis de vulnerabilidades y respuesta ante incidentes.</p>
-                <p class="mb-4">Graduado de un Bootcamp de Ciberseguridad intensivo donde adquirí habilidades técnicas avanzadas mediante metodologías hands-on.</p>
-                <p class="mb-4">Poseo la certificación BTL1 (Blue Team Level 1) y actualmente cursando la certificación EJPTv2, consolidando mis conocimientos en pruebas de penetración.</p>
-                <p>Nivel de inglés B2 con capacidad para comunicación técnica fluida y redacción de documentación en inglés.</p>
+        <section id="sobre-mi" class="py-20 border-t border-darkgray">
+            <h2 class="text-3xl font-bold text-cybergreen mb-8 flex items-center">
+<span class="bg-cyberblue w-4 h-4 rounded-full mr-4"></span>
+                <span>Sobre Mí</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4 leading-relaxed">
+                        Profesional enfocado en ciberseguridad ofensiva y defensiva con un enfoque práctico en hacking ético, análisis de vulnerabilidades y respuesta ante incidentes.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        Graduado de un Bootcamp intensivo de Ciberseguridad donde adquirí experiencia práctica en entornos controlados, simulando ataques reales y diseñando defensas efectivas.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        Mi objetivo es proteger infraestructuras críticas y datos sensibles mediante la implementación de estrategias de seguridad proactivas y la identificación temprana de amenazas.
+                    </p>
+                </div>
+                <div>
+                    <div class="bg-darker p-6 rounded-lg border-l-4 border-cybergreen">
+                        <h3 class="text-xl font-mono text-cybergreen mb-4">Competencias Técnicas</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i data-feather="shield" class="mr-2 text-cybergreen"></i>
+                                Hacking Ético
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="search" class="mr-2 text-cyberblue"></i>
+                                Análisis de Vulnerabilidades
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="alert-octagon" class="mr-2 text-cyberblue"></i>
+                                Respuesta a Incidentes
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="target" class="mr-2 text-cyberblue"></i>
+                                Pentesting
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="file-text" class="mr-2 text-cyberblue"></i>
+                                Forense Digital
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="eye" class="mr-2 text-cyberblue"></i>
+                                OSINT
+                            </li>
+                        </ul>
+                    </div>
+</div>
             </div>
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="py-20">
-            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Certificaciones</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-primary hover:shadow-lg hover:shadow-cyber-primary/10 transition">
-                    <div class="flex items-center gap-4 mb-4">
-                        <i data-feather="shield" class="text-cyber-primary"></i>
+        <section id="certificaciones" class="py-20 border-t border-darkgray">
+            <h2 class="text-3xl font-bold text-cybergreen mb-8 flex items-center">
+<span class="bg-cyberblue w-4 h-4 rounded-full mr-4"></span>
+                <span>Certificaciones</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyberblue bg-opacity-20 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-cybergreen"></i>
+</div>
                         <h3 class="text-xl font-bold">BTL1</h3>
                     </div>
-                    <p>Blue Team Level 1 certificación que valida habilidades en detección y respuesta a amenazas.</p>
+                    <p class="text-sm text-gray-400 mb-4">Blue Team Level 1</p>
+                    <p class="text-gray-300">Certificación que valida conocimientos en defensa de sistemas y redes, detección de amenazas y respuesta a incidentes.</p>
                 </div>
-                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-secondary hover:shadow-lg hover:shadow-cyber-secondary/10 transition">
-                    <div class="flex items-center gap-4 mb-4">
-                        <i data-feather="target" class="text-cyber-secondary"></i>
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyberblue bg-opacity-20 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-cyberblue"></i>
+                        </div>
                         <h3 class="text-xl font-bold">EJPTv2</h3>
                     </div>
-                    <p>eLearnSecurity Junior Penetration Tester v2 (en progreso), enfocado en pruebas de penetración básicas.</p>
+                    <p class="text-sm text-gray-400 mb-4">eLearnSecurity Junior Penetration Tester</p>
+                    <p class="text-gray-300">Certificación en progreso que demuestra habilidades en pruebas de penetración y evaluación de vulnerabilidades.</p>
                 </div>
-                <div class="bg-cyber-gray p-6 rounded-lg border-t-4 border-cyber-primary hover:shadow-lg hover:shadow-cyber-primary/10 transition">
-                    <div class="flex items-center gap-4 mb-4">
-                        <i data-feather="award" class="text-cyber-primary"></i>
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyberblue bg-opacity-20 p-3 rounded-full mr-4">
+                            <i data-feather="book" class="text-cybergreen"></i>
+</div>
                         <h3 class="text-xl font-bold">Bootcamp</h3>
                     </div>
-                    <p>Programa intensivo de ciberseguridad con enfoque práctico en hacking ético y análisis de vulnerabilidades.</p>
+                    <p class="text-sm text-gray-400 mb-4">Ciberseguridad Intensivo</p>
+                    <p class="text-gray-300">Programa práctico enfocado en hacking ético, análisis forense y técnicas de defensa en entornos controlados.</p>
                 </div>
             </div>
         </section>
-
         <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Proyectos</h2>
-            <div class="bg-cyber-gray p-8 rounded-lg">
-                <p class="mb-6">Actualmente trabajando en varios laboratorios y reportes de seguridad que serán publicados próximamente.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 border border-cyber-gray rounded hover:border-cyber-primary transition">
-                        <h3 class="text-xl font-bold mb-2 text-cyber-primary">Análisis de Vulnerabilidades</h3>
-                        <p class="text-sm opacity-80">Próximamente</p>
+        <section id="proyectos" class="py-20 border-t border-darkgray">
+            <h2 class="text-3xl font-bold text-cybergreen mb-8 flex items-center">
+                <span class="bg-cyberblue w-4 h-4 rounded-full mr-4"></span>
+                <span>Proyectos</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Blue Team Operations</h3>
+                    <p class="text-gray-400 mb-4">Implementación de estrategias defensivas y monitorización continua para proteger infraestructuras críticas.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">SIEM</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">EDR</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Kibana</span>
                     </div>
-                    <div class="p-4 border border-cyber-gray rounded hover:border-cyber-primary transition">
-                        <h3 class="text-xl font-bold mb-2 text-cyber-primary">Reporte de Pentesting</h3>
-                        <p class="text-sm opacity-80">Próximamente</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Análisis de Vulnerabilidades Web</h3>
+                    <p class="text-gray-400 mb-4">Evaluación exhaustiva de aplicaciones web identificando y remediando vulnerabilidades OWASP Top 10.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Burp Suite</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">OWASP ZAP</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">SQLi</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Análisis Forense Digital</h3>
+                    <p class="text-gray-400 mb-4">Investigación de incidentes de seguridad mediante técnicas de recolección y análisis de evidencias digitales.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Autopsy</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">FTK</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Wireshark</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Pentesting de Red Corporativa</h3>
+                    <p class="text-gray-400 mb-4">Evaluación de seguridad en redes internas identificando vectores de ataque y puntos débiles.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Metasploit</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Nmap</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">C2</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Hardening de Sistemas Linux</h3>
+                    <p class="text-gray-400 mb-4">Refuerzo de la seguridad en servidores Linux mediante configuración segura y eliminación de servicios innecesarios.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">CIS Benchmarks</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">SELinux</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">AppArmor</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-darker p-6 rounded-lg border border-darkgray hover:border-cybergreen transition-all duration-300 group">
+<h3 class="text-xl font-bold text-white mb-2">Detección de Amenazas con SIEM</h3>
+                    <p class="text-gray-400 mb-4">Configuración de reglas de correlación y dashboards para identificar comportamientos maliciosos en tiempo real.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Elastic Stack</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">Sigma Rules</span>
+                        <span class="text-xs px-2 py-1 bg-cyberblue bg-opacity-20 text-cyberblue rounded-full">YARA</span>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20">
-            <h2 class="text-3xl font-bold mb-12 text-cyber-primary font-mono">// Contacto</h2>
-            <div class="grid md:grid-cols-2 gap-12">
+<!-- Contact Section -->
+        <section id="contacto" class="py-20 border-t border-darkgray">
+            <h2 class="text-3xl font-bold text-cybergreen mb-8 flex items-center">
+<span class="bg-cyberblue w-4 h-4 rounded-full mr-4"></span>
+                <span>Contacto</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <p class="mb-6">Interesado en colaborar o conocer más sobre mi trabajo? No dudes en contactarme.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <i data-feather="mail" class="text-cyber-primary"></i>
-                            <a href="mailto:alberto_gallego86@hotmail.com" class="hover:text-cyber-primary transition">alberto_gallego86@hotmail.com</a>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-feather="linkedin" class="text-cyber-primary"></i>
-                            <a href="https://www.linkedin.com/in/albertogallegopun" target="_blank" class="hover:text-cyber-primary transition">linkedin.com/in/albertogallegopun</a>
-                        </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Información de contacto</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                            <i data-feather="mail" class="mr-4 text-cybergreen"></i>
+<a href="mailto:alberto_gallego86@hotmail.com" class="hover:text-cybergreen transition-colors duration-300">alberto_gallego86@hotmail.com</a>
+                            </li>
+                            <li class="flex items-center">
+                            <i data-feather="linkedin" class="mr-4 text-cybergreen"></i>
+<a href="https://www.linkedin.com/in/albertogallegopun" target="_blank" class="hover:text-cybergreen transition-colors duration-300">linkedin.com/in/albertogallegopun</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="bg-cyber-gray p-6 rounded-lg">
+                <div>
                     <form class="space-y-4">
                         <div>
-                            <label for="name" class="block mb-2">Nombre</label>
-                            <input type="text" id="name" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none">
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Nombre</label>
+                            <input type="text" id="name" class="w-full bg-darker border border-darkgray rounded-lg px-4 py-2 focus:border-cybergreen focus:outline-none transition-colors duration-300">
                         </div>
                         <div>
-                            <label for="email" class="block mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none">
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full bg-darker border border-darkgray rounded-lg px-4 py-2 focus:border-cybergreen focus:outline-none transition-colors duration-300">
                         </div>
                         <div>
-                            <label for="message" class="block mb-2">Mensaje</label>
-                            <textarea id="message" rows="4" class="w-full bg-cyber-dark border border-cyber-gray rounded px-4 py-2 focus:border-cyber-primary focus:outline-none"></textarea>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full bg-darker border border-darkgray rounded-lg px-4 py-2 focus:border-cybergreen focus:outline-none transition-colors duration-300"></textarea>
                         </div>
-                        <button type="submit" class="px-6 py-3 bg-cyber-primary text-cyber-dark font-bold rounded hover:bg-opacity-90 transition">Enviar Mensaje</button>
+                        <button type="submit" class="px-6 py-2 bg-cybergreen text-dark rounded-lg hover:bg-opacity-90 transition-colors duration-300">
+                            Enviar Mensaje
+                        </button>
                     </form>
                 </div>
             </div>
@@ -155,6 +267,5 @@
         feather.replace();
     </script>
     <script src="script.js"></script>
-<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
